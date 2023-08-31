@@ -11,4 +11,4 @@ read -p "Enter commit message: " commit_message
 git commit -m "$commit_message"
 
 # Push changes to the master branch
-git push origin master
+git push origin exercise-solutions
