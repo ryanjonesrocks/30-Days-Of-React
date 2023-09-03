@@ -8,12 +8,14 @@ import cssImage from './images/css_logo.png'
 import reactImage from './images/react_logo.png'
 // to import the doSomeMath from the math.js with or without extension
 import doSomeMath from './math.js'
+import JoinedTag from './JoinedTag';
 
 // to import the other modules
 // since these modules were not exported as default we have to desctructure
 import { addTwo, multiply, subtract } from './math.js'
 
 import * as everything from './math.js'
+import joinedTag from "./JoinedTag";
 console.log(addTwo(5, 5))
 console.log(doSomeMath.addTwo(5, 5))
 console.log(everything)
@@ -67,12 +69,22 @@ const personAge = (
 // JSX element, main
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
+const skills = ['React', 'JS', 'HTML', 'CSS', 'Python', 'Java', 'Ruby', 'C++', 'Node.js', 'TypeScript', 'PHP', 'Swift', 'SQL', 'Django', 'Angular'];
 
 const user = (
-    <div>
-        <img src={asabenehImage} alt='asabeneh image' />
+    <div className="profile-container">
+        <img className="circular-image" src={asabenehImage} alt='asabeneh image' />
+        <h3>John Doe &#10003;</h3>
+        <p>Senior developer</p>
+        <div>
+            {skills.map(skill => (
+                <span key={skill} className="skill-badge">{skill}</span>
+            ))}
+        </div>
     </div>
-)
+);
+
+
 
 const logo1  = (
     <div>
@@ -89,8 +101,8 @@ const logo1  = (
 const pageContent = (
     <div className="page-center">
         <div className="subscribe-container">
-            <h1>Subscribe</h1>
-            <p>Sign up with your email to receive news updates.</p>
+            <h1 className="subscribe-title">Subscribe</h1>
+            <p className="subscription-description">Sign up with your email to receive news updates.</p>
             <div className="input-group">
                 <input className="subscribe-input" type="text" id="fname" name="First Name" placeholder="First Name"/>
                 <input className="subscribe-input" type="text" id="lname" name="Last Name" placeholder="Last Name"/>
@@ -101,6 +113,13 @@ const pageContent = (
     </div>
 )
 
+const userProfile = (
+
+    <div>
+        <JoinedTag date="August 1st, 2020" />
+    </div>
+
+)
 
 
 
@@ -120,6 +139,7 @@ const main = (
             {result}
             {personAge}
             {user}
+            {userProfile}
             {pageContent}
             {logo1}
 
