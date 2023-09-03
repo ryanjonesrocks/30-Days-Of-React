@@ -34,9 +34,9 @@
       - [Injecting an array to a JSX Element](#injecting-an-array-to-a-jsx-element)
       - [Injecting an object to a JSX Element](#injecting-an-object-to-a-jsx-element)
   - [Exercises](#exercises)
-    - [Exercises: What is React?](#exercises-what-is-react)
-    - [Exercises: Why React?](#exercises-why-react)
-    - [Exercises: JSX](#exercises-jsx)
+- [Exercises: What is React?](#exercises-what-is-react)
+- [Exercises: Why React?](#exercises-why-react)
+- [Exercises: JSX](#exercises-jsx)
     - [Exercises: JSX Elements](#exercises-jsx-elements)
     - [Exercises: Inline Style](#exercises-inline-style)
     - [Exercises: Internal Styles](#exercises-internal-styles)
@@ -1552,44 +1552,139 @@ Now, you have a very good understanding of how to create JSX elements and also h
 
 ### Exercises
 
-#### Exercises: What is React?
+## Exercises: What is React?
 
-1. What is React?
-2. What is a library?
-3. What is a single page application?
-4. What is a component ?
-5. What is the latest version of React?
-6. What is DOM?
-7. What is React Virtual DOM?
-8. What does a web application or a website(composed of) have?
+1. **What is React?**
+   React is an open-source JavaScript library developed by Facebook for building dynamic and interactive UI components in web applications.
 
-#### Exercises: Why React?
+2. **What is a library?**
+   A library is a collection of pre-written code that provides specific functionalities, which can be reused across different projects.
 
-1. Why did you chose to use react?
-2. What measures do you use to know popularity ?
-3. What is more popular, React or Vue ?
+3. **What is a single page application?**
+   A single page application (SPA) loads a single HTML page and dynamically updates content as the user interacts, eliminating full page reloads.
 
-#### Exercises: JSX
+4. **What is a component?**
+   A component is a reusable and self-contained piece of code that encapsulates a specific functionality or UI element.
 
-1. What is an HTML element?
-2. How to write a self closing HTML element?
-3. What is an HTML attribute? Write some of them
-4. What is JSX?
-5. What is babel?
-6. What is a transpiler?
+5. **What is the latest version of React?**
+   As of my last update in September 2021, the latest version was 17.0.2. Check the official React website for the most up-to-date version.
+
+6. **What is DOM?**
+   The Document Object Model (DOM) is a browser interface representing a web page's structure as a tree of objects.
+
+7. **What is React Virtual DOM?**
+   React Virtual DOM is an abstraction that optimizes UI updates by calculating the difference between the virtual and actual DOM.
+
+8. **What does a web application or a website (composed of) have?**
+   A web application or website includes HTML, CSS, JavaScript, and possibly a backend for data and logic.
+
+## Exercises: Why React?
+
+1. **What measures do you use to know popularity?**
+   Popularity is measured by GitHub stars, downloads, surveys, job demand, discussions, and community engagement.
+
+2. **What is more popular, React or Vue?**
+   As of September 2021, React was more popular, but React and Vue have their strengths and are used based on project requirements.
+
+## Exercises: JSX
+
+1. **What is an HTML element?**
+   An HTML element is a building block with a start tag, content, and an end tag that defines the structure of a web page.
+
+2. **How to write a self-closing HTML element?**
+   Use a forward slash before the closing angle bracket of the opening tag, like `<img src="image.jpg" alt="An image"/>`.
+
+3. **What is an HTML attribute? Write some of them.**
+   An HTML attribute provides extra information within an opening tag. Examples include `src`, `alt`, `class`, `id`, `href`, and `style`.
+
+4. **What is JSX?**
+   JSX (JavaScript XML) is a syntax extension in React for writing HTML-like code within JavaScript.
+
+5. **What is Babel?**
+   Babel is a JavaScript compiler that translates modern code, including JSX, into older JavaScript for browser compatibility.
+
+6. **What is a transpiler?**
+   A transpiler converts code from one language to another. In JavaScript, it's used to turn modern syntax into older versions.
 
 #### Exercises: JSX Elements
 
 1. What is a JSX element?
 2. Write your name in a JSX element and store it in a name variable
+
+    ```javascript
+      const name = "Rocks";
+      const jsxElement = {<div>{name}</div>}
+    ```
+
 3. Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+
+    ```javascript
+      const name = "Rocks";
+      const country = "USA";
+      const gender = "M";
+      const email = "admin@github.com";
+      const phoneNumber = "123-456-7890";
+
+      const jsxElement = (
+        <div>
+          <h1>{name}</h1>
+          <p>{`Country: ${country}`}</p>
+          <p>{`Gender: ${gender}`}</p>
+          <p>{`Email: ${email}`}</p>
+          <p>{`Phone Number: ${phoneNumber}`}</p>
+        </div>
+        );
+    ```
+
 4. Write a footer JSX element
+
+  ```javascript
+      const copyRight = 'Copyright 2020'
+      // JSX element, footer
+      const footer = (
+        <footer>
+          <div className='footer-wrapper'>
+            <p>{copyRight}</p>
+          </div>
+        </footer>
+      )
+  ```
 
 #### Exercises: Inline Style
 
 1. Create a style object for the main JSX
+
+```javascript
+  const styles = {
+    backgroundColor: 'black',
+    color: 'neongreen',
+    padding: '30px'
+  };
+```
+
 2. Create a style object for the footer and app JSX
-3. Add more styles to the JSX elements
+  
+  ```javascript
+  const footerStyles = {
+    backgroundColor: 'gray',
+    color: 'white',
+    textAlign: 'center',
+    padding: '10px'
+  };
+  ```
+
+3.Add more styles to the JSX elements
+
+  ```javascript
+    const appStyles = {
+      fontFamily: 'Arial, sans-serif',
+      fontSize: '16px',
+      lineHeight: '1.5',
+      maxWidth: '800px',
+      margin: '0 auto',
+      padding: '20px'
+    };
+  ```
 
 #### Exercises: Internal Styles
 
